@@ -4,10 +4,11 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <PackageTags>TelegramBotExtentions,Step,UserStep,AdminStep</PackageTags>
-    <PackageReleaseNotes>version 1</PackageReleaseNotes>
+    <PackageReleaseNotes>version 1.1</PackageReleaseNotes>
     <PackageIcon>icons8-foot-64.png</PackageIcon>
     <Description>Can Use for Management Your bot Telegram</Description>
     <RepositoryUrl>https://github.com/miticyber/UserStep</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

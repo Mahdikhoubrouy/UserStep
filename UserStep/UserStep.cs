@@ -21,8 +21,10 @@ namespace UserStep
         /// <param name="Step"></param>
         public void SetStep(long UserId, Tenum Step)
         {
-            if (Users.Find(x => x.UserId == UserId) == null)
+            if (!Users.Exists(x => x.UserId == UserId))
+            {
                 Users.Add(new UserStepModel<Tenum>() { UserId = UserId, Step = Step });
+            }
         }
 
 
@@ -36,7 +38,9 @@ namespace UserStep
         {
             var findUser = Users.Find(x => x.UserId == UserId);
             if (findUser == null)
+            {
                 throw new UserNotFound("User with this UserId was not found");
+            }
             findUser.Step = Step;
         }
 
@@ -62,7 +66,9 @@ namespace UserStep
         {
             var findUser = Users.Find(x => x.UserId == UserId);
             if (findUser == null)
+            {
                 throw new UserNotFound("User with this UserId was not found");
+            }
             return findUser;
         }
 
