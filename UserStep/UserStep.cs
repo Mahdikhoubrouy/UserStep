@@ -39,7 +39,7 @@ namespace UserStep
             var findUser = Users.Find(x => x.UserId == UserId);
             if (findUser == null)
             {
-                throw new UserNotFound("User with this UserId was not found");
+              return;
             }
             findUser.Step = Step;
         }
@@ -66,8 +66,8 @@ namespace UserStep
         {
             var findUser = Users.Find(x => x.UserId == UserId);
             if (findUser == null)
-            {
-                throw new UserNotFound("User with this UserId was not found");
+            { 
+              return;
             }
             return findUser;
         }
