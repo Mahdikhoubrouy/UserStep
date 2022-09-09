@@ -15,7 +15,7 @@ namespace UserStep
 
 
         /// <summary>
-        /// Add User And SetStep
+        /// Add User And Set Step
         /// </summary>
         /// <param name="UserId"></param>
         /// <param name="Step"></param>
@@ -33,7 +33,6 @@ namespace UserStep
         /// </summary>
         /// <param name="UserId"></param>
         /// <param name="Step"></param>
-        /// <exception cref="UserNotFound"></exception>
         public void UpdateStep(long UserId, Tenum Step)
         {
             var findUser = Users.Find(x => x.UserId == UserId);
@@ -61,7 +60,6 @@ namespace UserStep
         /// </summary>
         /// <param name="UserId"></param>
         /// <returns></returns>
-        /// <exception cref="UserNotFound"></exception>
         public UserStepModel<Tenum> GetStep(long UserId)
         {
             var findUser = Users.Find(x => x.UserId == UserId);
